@@ -13,7 +13,7 @@
 
 ;; vice-versa for a number smaller than the guess
 (defn smaler []
-  (reset! *big* (inc (guess-my-number))))
+  (reset! *big* (dec (guess-my-number))))
 
 ;; when starting over, we reset the upper and lower bounds
 (defn start-over []
