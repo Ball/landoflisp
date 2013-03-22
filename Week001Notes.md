@@ -15,7 +15,7 @@ The first program is a number guessing game.  The game is meant to be played in 
 * The computer makes a guess
 * You ask the computer to guess a smaller or bigger number
 
-see [guess.lisp](clisp/guess.lisp) for the program.
+see [guess.lisp](clisp/guess.lisp) or [guess.clj](clojure/guess.clj) for the program.
 
 ## What I Learned
 
