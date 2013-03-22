@@ -4,4 +4,4 @@ Some of my coworkers from [Sep](http://www.sep.com) and I are working on a book 
 
 # Week 1 Schedule
 
-The reading for week 1 is Chapters 1 - 3.
+The reading for week 1 is [Chapters 1 - 3](Week001Notes.md).
