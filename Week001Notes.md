@@ -96,3 +96,32 @@ short hand for (crd (car (cdr (cdr some-list)))) used for navigating nested list
 #### list
 	(list 'a 'b 'c) => '(a b c)
 constructs a list from the arguments
+
+## Code Review _guess.lisp_
+
+Two things stick out immediately.
+
+1. Use of global state with <code>defparameter</code>
+2. There are no conditionals.
+3. Uses the lisp REPL to play the game.
+4. It's not really a game, is it?
+
+I don't like some of them but they exists for [pedagogical](http://en.wikipedia.org/wiki/Pedagogy) reasons.  Let's work our way backwards through these.
+
+### 4. It's not really a game, it it?
+
+It isn't.  But it CAN prove to have a sense of wonder when the computer reads your mind when you don't know how it's doing it.  In a sense, this is probably why it uses the abs function.  It is probably more important that it obfuscates the center point calculation than any speed gain precisely for this sense of wonder.  The younger the developer, the more important this sense of wonder is.  _THAT_ is why we do this in the first place.
+
+### 3. It uses the Lisp REPL to play the game.
+
+Having written parts of a [Mud in Erlang](https://github.com/Ball/ErlangMud) that used the REPL as a play interface, I really understand this.  It's the easiest way to explore the core of the game without messing about with tricky UI code.  Even a simple text input toy like this requires understanding at least three concepts; The expected input, variations on that expected input, and all non-valid input.  For now, let's skip it.
+
+### 2. There are no conditionals.
+
+When teaching, it is best to avoid ambiguity initially.  Then expand to conditions later.  We will get there later, but let's not confuse the issue.
+
+### 1. It uses global state with <code>defparameter</code>
+
+If we don't have the program controlling its own communication, we need each function to get the current state of the world from an external source and update that source.  Databases are hard, so we use global variables.  I wish it was different, but that's what we are working with here.  It comes from the REPL constraint.
+
+
