@@ -158,7 +158,7 @@ Anonymous functions
 
 Creates and returns an 'anonymous' function
 
-# Code review - [wizard.lisp](lisp\wizard.lisp)
+# Code review - [wizard.lisp](lisp/wizard.lisp)
 
 Possible duplication of data structures: \*objects\* - no infomration not in \*object-locations\*
 
