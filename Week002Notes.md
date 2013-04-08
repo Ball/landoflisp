@@ -158,7 +158,7 @@ Anonymous functions
 
 Creates and returns an 'anonymous' function
 
-# Code review - [wizard.lisp](lisp/wizard.lisp)
+# Code review - [wizard.lisp](clisp/wizard.lisp)
 
 Possible duplication of data structures: \*objects\* - no infomration not in \*object-locations\*
 
@@ -171,6 +171,6 @@ There are three ways of dealing with _helper functions_.
 
 # Talking points
 
-  REPL vs Event loop
-  Scoping functions as encapsulation
-  S-Expressions vs Strings/templates
+ * REPL vs Event loop
+ * Scoping functions as encapsulation
+ * S-Expressions vs Strings/templates
